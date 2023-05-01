@@ -7,9 +7,13 @@ import Form from './components/Form';
 function App() {
   return (
     <>
+<<<<<<< HEAD
     <Navbar title="Bhavya" home="My Home"/>
     <Slider/>
     <Form heading="Enter The Text Here"/>
+=======
+    <Navbar title="Bhavya"/>
+>>>>>>> a38efc3227149f511dc2514b2f2b978813603f67
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
