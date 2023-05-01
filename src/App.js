@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
+import Slider from './components/Slider';
+import Form from './components/Form';
 
 function App() {
   return (
     <>
-    <Navbar title="Bhavya"/>
+    <Navbar title="Bhavya" home="My Home"/>
+    <Slider/>
+    <Form heading="Enter The Text Here"/>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
