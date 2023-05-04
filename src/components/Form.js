@@ -48,11 +48,11 @@ export default function Form(props) {
     <h1 className={`my-3 text-center text-bg-${props.mode} text-warning`}>{props.heading}</h1>
     <div className="mb-3">
         <textarea style={{backgroundColor: props.mode==='dark'?'grey':'white'}} className={`form-control text-${props.mode==='dark'?'light':'dark'} `} id="myBox" placeholder='Enter Text Here' value={text} rows="5" autoFocus onChange={handleOnChanege}></textarea>
-        <button className='btn btn-success my-3 ms-3' onClick= {handleClick} >Convert To Uppercase</button>
-        <button className='btn btn-primary my-3 ms-3' onClick= {handleClick2} >Convert To Lowercase</button>
-        <button className='btn btn-danger my-3 ms-3' onClick= {handleClickClear} >Clear Text</button>
-        {/* <button style={myStyle}className='btn btn-light my-3 ms-3' type='button' onClick={toggleStyle}>{btnToggleStyle}</button> */}
-        <p className='text-danger'>{text.split(" ").length} Words and {text.length} characters</p>
+        <button className='btn btn-success my-3 ms-3' disabled={text.length===0} onClick= {handleClick} >Convert To Uppercase</button>
+        <button className='btn btn-primary my-3 ms-3' disabled={text.length===0} onClick= {handleClick2} >Convert To Lowercase</button>
+        <button className='btn btn-danger my-3 ms-3' disabled={text.length===0} onClick= {handleClickClear} >Clear Text</button>
+        {/* <button style={myStyle}className='btn btn-light my-3 ms-3' type='button' disabled={text.length===0} onClick={toggleStyle}>{btnToggleStyle}</button> */}
+        <p className='text-danger'>{text.split(" ").filter((element)=>{return element.length!==0}).length} Words and {text.length} characters</p>
         <h2>Text Preview:-</h2>
         <p >{text.length<1?'Enter Some Text In The Box Above': text}</p>
     </div>
